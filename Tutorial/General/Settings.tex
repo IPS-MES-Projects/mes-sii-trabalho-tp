@@ -1,0 +1,220 @@
+% Give your report a title
+\newcommand\reporttitle{
+    Tutoorial API RESTful com Fastify e Mongoose
+}
+
+% Insert course code, name, quartile number and year (or any other subtitle)
+\newcommand\reportsubtitle{
+    MES, Sistemas de Informação para a Internet - 2022
+}
+
+% Add your group number or any other text.
+\newcommand\groupnumber{
+    \textbf{Grupo}
+}
+
+% Insert authors and student numbers here
+\newcommand\reportauthors{
+    Edgar Santos & 201600264 \\
+}
+
+% Add the name of your tutor or any other text.
+\newcommand\grouptutor{
+    Professor: José Pereira
+}
+
+% Date and location (default: current date and Eindhoven)
+\newcommand\placeanddate{
+    Setúbal, \today
+}
+
+% Set caption label for listings
+\renewcommand{\lstlistingname}{Código}
+
+% Define Ips-orange (color of the TU/e logo). Can be changed to drastically change the look of the template
+\definecolor{Ips-orange}{RGB}{241, 135, 53}
+
+% Import the bibliography file
+\addbibresource{General/References.bib}
+
+% Force all bibliography entries to display even when no cited in the text
+\nocite{*}
+
+% All of the following code can be removed to be left with (close to) default LaTeX behaviour. 
+
+% Sets up hyperlinks in the document to be colored
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Ips-orange,
+    urlcolor=Ips-orange,
+    citecolor=Ips-orange
+}
+\urlstyle{same} % Defines settings for link and reference formatting
+
+% Change bullet style for level 1, 2 and 3 respectively for itemize
+\renewcommand{\labelitemi}{\scriptsize\textcolor{Ips-orange}{$\blacksquare$}}% level 1
+\renewcommand{\labelitemii}{\scriptsize\textcolor{Ips-orange}{$\square$}}% level 2
+\renewcommand{\labelitemiii}{\textcolor{Ips-orange}{$\circ$}}% level 3
+
+% \renewcommand{\labelitemi}{\small\textcolor{Ips-orange}{\ding{70}}} % level 1
+% \renewcommand{\labelitemii}{\small\textcolor{Ips-orange}{\ding{71}}}% level 2
+% \renewcommand{\labelitemiii}{\tiny\textcolor{Ips-orange}{\ding{71}}}% level 3
+
+% Change bullet style for level 1, 2 and 3 respectively for enumerate
+\renewcommand{\labelenumi}{\textbf{\textcolor{Ips-orange}{\arabic*.}}}% level 1
+\renewcommand{\labelenumii}{\textbf{\textcolor{Ips-orange}{[\alph*]}}}% level 2
+\renewcommand{\labelenumiii}{\textbf{\textcolor{Ips-orange}{\roman*.}}}% level 3
+
+% Have reference labels be linked to section (section 3 will have fig. 3.1 etc.)
+\counterwithin{equation}{section} % For equations
+\counterwithin{figure}{section} % For figures
+\counterwithin{table}{section} % For tables
+
+% Increase head height and compensate top margin
+\setlength{\headheight}{24pt}
+\addtolength{\topmargin}{-4pt}
+
+% Creates a beautiful header/footer
+\pagestyle{fancy}
+\lhead{\includegraphics[height = 16pt]{Figures/0. General/ips_logo_small.pdf}}
+\rhead{\reporttitle}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{Página \thepage}
+
+% Formats section, subsection and subsubsection titles respectively 
+\titleformat{\section}{\sffamily\color{Ips-orange}\Large\bfseries}{\thesection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats section titles
+
+\titleformat{\subsection}{\sffamily\color{Ips-orange}\large\bfseries}{\thesubsection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats subsection titles
+
+\titleformat{\subsubsection}{\sffamily\color{Ips-orange}\bfseries}{\thesubsubsection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats subsubsection titles
+
+% Formats captions
+\DeclareCaptionFont{Ips-orange}{\color{Ips-orange}}
+\captionsetup{labelfont={Ips-orange,bf}}
+
+% Changes font to mlmodern
+\usepackage{mlmodern}
+
+% Adds spacing between paragraphs
+\setlength\parskip{6pt}
+
+% Removes indent when starting a new paragraph
+\setlength\parindent{0pt}
+
+% Makes the text of the whole document one-and-a-half spaced. Footnotes, figures, and tables will still be singlespaced, however.
+% \onehalfspacing
+
+% Limits the ToC to sections and subsections (no subsubsec.)
+% \setcounter{tocdepth}{2}
+
+% Define additional required colors
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{mediumgray}{rgb}{0.3, 0.4, 0.4}
+\definecolor{mediumblue}{rgb}{0.0, 0.0, 0.8}
+\definecolor{forestgreen}{rgb}{0.13, 0.55, 0.13}
+\definecolor{darkviolet}{rgb}{0.58, 0.0, 0.83}
+\definecolor{royalblue}{rgb}{0.25, 0.41, 0.88}
+\definecolor{crimson}{rgb}{0.86, 0.8, 0.24}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+% Formats code highlight
+\lstset{
+    backgroundcolor=\color{background},         % choose the background color. You must add \usepackage{color}
+    basicstyle=\footnotesize\ttfamily,          % the font basic style that is used for the code
+    breakatwhitespace=false,                    % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                            % sets automatic line breaking
+    captionpos=b,
+    columns=fullflexible,
+    commentstyle=\color{mediumgray}\upshape,    % comment style
+    emph={},
+    emphstyle=\color{crimson},
+    extendedchars=true,                         % requires inputenc
+    fontadjust=true,
+    frame=lines,                               % adds a frame around the code
+    identifierstyle=\color{black},
+    keepspaces=true,
+    keywordstyle=\color{mediumblue},            % keyword style
+    keywordstyle={[2]\color{darkviolet}},
+    keywordstyle={[3]\color{royalblue}},
+    numbers=left,                               % where to put the line-numbers
+    numbersep=5pt,                              % how far the line-numbers are from the code
+    numberstyle=\tiny\color{gray},        % the style that is used for the line-numbers
+    stepnumber=1,                               % the step between two line-numbers. If it's 1, each line will be numbered
+    rulecolor=\color{black},                    % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+    showlines=true,
+    showspaces=false,
+    showstringspaces=false,                     % underline spaces within strings
+    showtabs=false,                             % show tabs within strings adding particular underscores
+    stringstyle=\color{forestgreen},            % string literal style
+    tabsize=2,                                  % sets default tab size to 2 spaces
+    title=\lstname,                             % show the filename of files included with \lstinputlisting;
+    upquote=true,                               % requires textcomp
+}
+
+% Fix listings issues with most characters in latin languages
+\lstset{literate=
+    {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+{ã}{{\~a}}1 {ẽ}{{\~e}}1 {ĩ}{{\~i}}1 {õ}{{\~o}}1 {ũ}{{\~u}}1
+{Ã}{{\~A}}1 {Ẽ}{{\~E}}1 {Ĩ}{{\~I}}1 {Õ}{{\~O}}1 {Ũ}{{\~U}}1
+{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+{ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+{€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+{»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1
+}
+
+% Add JavaScript language support to listings
+\lstdefinelanguage{JavaScript}{
+    morekeywords=[1]{break, continue, delete, else, for, function, if, in,
+            new, return, this, typeof, var, void, while, with},
+    % Literals, primitive types, and reference types.
+    morekeywords=[2]{false, null, true, boolean, number, undefined,
+            Array, Boolean, Date, Math, Number, String, Object},
+    % Built-ins.
+    morekeywords=[3]{eval, parseInt, parseFloat, escape, unescape},
+    sensitive,
+    morecomment=[s]{/*}{*/},
+    morecomment=[l]//,
+    morecomment=[s]{/**}{*/}, % JavaDoc style comments
+    morestring=[b]',
+    morestring=[b]"
+}[keywords, comments, strings]
+
+\lstdefinelanguage[ECMAScript2015]{JavaScript}[]{JavaScript}{
+    morekeywords=[1]{await, async, case, catch, class, const, default, do,
+            enum, export, extends, finally, from, implements, import, instanceof,
+            let, static, super, switch, throw, try},
+    morestring=[b]` % Interpolation strings.
+}
+\lstalias[]{ES6}[ECMAScript2015]{JavaScript}
+
+% Add JSON language support to listings
+\lstdefinelanguage{JSON}{
+literate=
+*{0}{{{\color{numb}0}}}{1}
+{1}{{{\color{numb}1}}}{1}
+{2}{{{\color{numb}2}}}{1}
+{3}{{{\color{numb}3}}}{1}
+{4}{{{\color{numb}4}}}{1}
+{5}{{{\color{numb}5}}}{1}
+{6}{{{\color{numb}6}}}{1}
+{7}{{{\color{numb}7}}}{1}
+{8}{{{\color{numb}8}}}{1}
+{9}{{{\color{numb}9}}}{1}
+{:}{{{\color{punct}{:}}}}{1}
+{,}{{{\color{punct}{,}}}}{1}
+{\{}{{{\color{delim}{\{}}}}{1}
+{\}}{{{\color{delim}{\}}}}}{1}
+{[}{{{\color{delim}{[}}}}{1}
+{]}{{{\color{delim}{]}}}}{1},
+}
