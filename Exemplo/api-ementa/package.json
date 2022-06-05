@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js"
   },
-  "author": "Edgar Santos <edgarbs1998@gmail.com>",
+  "author": "Edgar Santos <201600264@estudantes.ips.pt>",
   "license": "MIT",
   "dependencies": {
     "@fastify/formbody": "^6.0.1",
